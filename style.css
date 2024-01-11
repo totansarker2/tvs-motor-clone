@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header>ul {
+    height: 25px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin: 10px 3vw 0px 0px;
+}
+
+header>ul li {
+    display: flex;
+    gap: 10px;
+}
+
+header>ul li img {
+    max-height: 80%;
+}
+
+header nav {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 3vw 10px 3vw;
+    white-space: nowrap;
+    resize: both;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    list-style-type: none;
+}
+
+header nav li {
+    font-size: 1vw;
+}
+
+header div {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+header nav div img {
+    display: block;
+}
+
+header nav .logo {
+    width: 150px;
+    height: 100%;
+    display: block;
+    /* border: 1px solid red */
+}
+
+/*inline img doesn't take 100% height*/
+.banner {
+    width: 100%;
+    font-size: 0;
+    /*Sometimes inline images have extra padding on the bottom due to inline text sizes/line heights.*/
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+    /* inline padding isn't applied on block element*/
+}
+
+.main {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main .heading , .vehicles .heading{
+    height: 7.5rem;
+    width: 65.2%;
+    font-size: 1rem;
+    padding: 1.5rem 3rem;
+    text-transform: uppercase;
+    background-color: #FB2A1D;
+    color: white;
+}
+
+.main .heading .story , .vehicles .heading .story{
+    font-size: 2.3rem;
+}
+
+.main .layout-slider {
+    padding: 3vw;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    column-gap: 1vw;
+}
+
+.main .layout-slider img {
+    width: 100%;
+    height: 100%;
+}
+
+.vehicles .heading{
+    background-color: #0D3880;
+}
+
+.vehicles .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    /* grid-row-start, grid-column-start, grid-row-end and grid-column-end*/
+    /* grid-area: 1 / 1 / 2 / 1; */
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.vehicles .container nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vehicles .container nav ul{
+    list-style-type: none;
+    display: flex;
+}
